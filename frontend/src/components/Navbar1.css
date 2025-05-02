@@ -1,0 +1,99 @@
+/* Navbar1.css */
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure it starts from the left edge */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .navbar-logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  .navbar-logo a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+    white-space: nowrap;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow links to take up available space */
+    justify-content: flex-end; /* Push links to the right */
+  }
+  
+  .navbar-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+    white-space: nowrap;
+  }
+  
+  .navbar-links a:hover {
+    color: #007bff;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px;
+    }
+  
+    .navbar-logo a {
+      font-size: 20px;
+    }
+  
+    .navbar-links a {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Even smaller screens */
+  @media (max-width: 576px) {
+    .navbar-logo a {
+      font-size: 16px;
+    }
+  
+    .navbar-links a {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Smallest screens - try wrapping links if needed */
+  @media (max-width: 400px) {
+    .navbar {
+      flex-direction: column; /* Stack logo and links */
+      align-items: flex-start;
+      padding: 8px 10px;
+    }
+  
+    .navbar-logo {
+      margin-bottom: 5px;
+    }
+  
+    .navbar-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: flex-start;
+      width: 100%; /* Make links take full width */
+    }
+  
+    .navbar-links a {
+      margin-left: 0;
+      margin-bottom: 5px;
+      display: block; /* Each link on a new line */
+    }
+  }

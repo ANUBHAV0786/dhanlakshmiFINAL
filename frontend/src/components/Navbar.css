@@ -1,0 +1,62 @@
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .navbar-logo a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .navbar-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+  }
+  
+  .navbar-links a:hover {
+    color: #007bff;
+  }
+  
+  /* ///////////// Below here are the personal changes  */
+
+  .navbar-links {
+    display: flex; 
+    align-items: center; 
+  }
+
+  
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px; /* Slightly reduce horizontal padding */
+    }
+  
+    .navbar-logo a {
+      font-size: 20px; /* Slightly reduce logo font size */
+    }
+  
+    .navbar-links a {
+      margin-left: 10px; /* Reduce margin between links */
+      font-size: 16px; /* Reduce link font size */
+    }
+  }
+  
+  /* Even smaller screens */
+  @media (max-width: 576px) {
+    .navbar-links a {
+      margin-left: 5px; /* Further reduce margin */
+      font-size: 14px; /* Further reduce font size */
+    }
+  }

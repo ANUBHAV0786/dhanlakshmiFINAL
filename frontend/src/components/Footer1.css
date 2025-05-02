@@ -1,0 +1,100 @@
+/* Footer1.css */
+.footer {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensure it starts from the left edge */
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .footer-left {
+    flex-shrink: 0; /* Prevent left text from shrinking */
+  }
+  
+  .footer-left p {
+    margin: 0;
+    font-size: 14px;
+    color: #333333;
+    white-space: nowrap;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+    white-space: nowrap;
+  }
+  
+  .footer-right a:hover {
+    color: #007bff;
+  }
+  
+  /* Media query for tablets */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 10px 15px;
+    }
+  
+    .footer-left p {
+      font-size: 12px;
+    }
+  
+    .footer-right a {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Media query for mobile */
+  @media (max-width: 576px) {
+    .footer {
+      padding: 8px 10px;
+      justify-content: space-around; /* Distribute space more evenly */
+    }
+  
+    .footer-left p {
+      font-size: 10px;
+    }
+  
+    .footer-right a {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Smallest screens - stack elements if horizontal space is truly limited */
+  @media (max-width: 400px) {
+    .footer {
+      flex-direction: column; /* Stack left and right */
+      align-items: center; /* Center items */
+      text-align: center; /* Center text within items */
+      padding: 8px 5px;
+    }
+  
+    .footer-left {
+      margin-bottom: 5px; /* Add space between stacked elements */
+    }
+  
+    .footer-right {
+      flex-direction: column; /* Stack links vertically */
+    }
+  
+    .footer-right a {
+      margin-left: 0;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }

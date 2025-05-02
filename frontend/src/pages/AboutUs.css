@@ -1,0 +1,35 @@
+.about {
+    margin-top: 70px; /* Space for navbar */
+    margin-bottom: 70px; /* Space for footer */
+    padding: 20px;
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  /* Card */
+  .card {
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  /* Special spacing for single testimonial card */
+  .testimonial-row {
+    justify-content: center;
+  }
+  

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x-_h_rf6cvkn(xq(@e2)%*mt%+hh$=#$(#=f9n8hr8&1wo5$w%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -136,3 +137,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'paenterpriseslimited@gmail.com'   
 EMAIL_HOST_PASSWORD = 'azwfneydtdjwredt' 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
